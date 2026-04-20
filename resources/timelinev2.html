@@ -101,7 +101,7 @@
             color: #475569;
         }
 
-        /* Panel expansible */
+        /* Panel expansible - Ahora activo por defecto */
         .detail-panel {
             max-height: 0;
             overflow: hidden;
@@ -110,7 +110,7 @@
         }
 
         .active .detail-panel {
-            max-height: 400px;
+            max-height: 500px; /* Incrementado para asegurar que quepa todo */
             opacity: 1;
             margin-top: 20px;
             padding-top: 20px;
@@ -141,13 +141,13 @@
 
     <div class="max-w-4xl mx-auto px-4 py-12 text-center">
         <h1 class="text-4xl font-bold text-slate-900 mb-4">Evolución de la Ingeniería de Software</h1>
-        <p class="text-slate-600 italic">Un recorrido por los hitos que definieron la disciplina. Toca cada tarjeta para profundizar.</p>
+        <p class="text-slate-600 italic">Un recorrido por los hitos que definieron la disciplina.</p>
     </div>
 
     <div class="timeline-container">
         
         <!-- Era 1: Orígenes -->
-        <div class="timeline-item left" onclick="toggleItem(this)">
+        <div class="timeline-item left active" onclick="toggleItem(this)">
             <div class="card" style="border-top-color: #3b82f6;">
                 <div class="flex justify-between items-start mb-2">
                     <span class="year-label">Décadas de 1940 y 1950</span>
@@ -173,7 +173,7 @@
         </div>
 
         <!-- Era 2: Crisis -->
-        <div class="timeline-item right" onclick="toggleItem(this)">
+        <div class="timeline-item right active" onclick="toggleItem(this)">
             <div class="card" style="border-top-color: #ef4444;">
                 <div class="flex justify-between items-start mb-2">
                     <span class="year-label">1968</span>
@@ -198,7 +198,7 @@
         </div>
 
         <!-- Era 3: Cascada -->
-        <div class="timeline-item left" onclick="toggleItem(this)">
+        <div class="timeline-item left active" onclick="toggleItem(this)">
             <div class="card" style="border-top-color: #10b981;">
                 <div class="flex justify-between items-start mb-2">
                     <span class="year-label">Décadas de 1960 y 1970</span>
@@ -223,7 +223,7 @@
         </div>
 
         <!-- Era 4: Profesionalización -->
-        <div class="timeline-item right" onclick="toggleItem(this)">
+        <div class="timeline-item right active" onclick="toggleItem(this)">
             <div class="card" style="border-top-color: #8b5cf6;">
                 <div class="flex justify-between items-start mb-2">
                     <span class="year-label">Décadas de 1980 y 1990</span>
@@ -249,7 +249,7 @@
         </div>
 
         <!-- Era 5: Agilidad -->
-        <div class="timeline-item left" onclick="toggleItem(this)">
+        <div class="timeline-item left active" onclick="toggleItem(this)">
             <div class="card" style="border-top-color: #f59e0b;">
                 <div class="flex justify-between items-start mb-2">
                     <span class="year-label">Décadas de 2000 y 2010</span>
@@ -274,7 +274,7 @@
         </div>
 
         <!-- Era 6: DevOps -->
-        <div class="timeline-item right" onclick="toggleItem(this)">
+        <div class="timeline-item right active" onclick="toggleItem(this)">
             <div class="card" style="border-top-color: #0ea5e9;">
                 <div class="flex justify-between items-start mb-2">
                     <span class="year-label">Actualidad</span>
@@ -303,15 +303,8 @@
 
     <script>
         function toggleItem(element) {
-            // Alternar estado activo
+            // Permite seguir colapsando/expandiendo manualmente si se desea
             element.classList.toggle('active');
-            
-            // Si se activa, desplazar suavemente
-            if(element.classList.contains('active')) {
-                setTimeout(() => {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, 100);
-            }
         }
     </script>
 </body>
