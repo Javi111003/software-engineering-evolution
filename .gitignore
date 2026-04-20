@@ -42,3 +42,6 @@
 # Ignorar carpetas temporales de LaTeX
 /_minted*
 /auto
+
+# Folders
+/images/
