@@ -1,0 +1,146 @@
+\documentclass[12pt,a4paper]{article}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cite}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Configuración de hipervínculos
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    citecolor=blue,
+    pdftitle={El Desarrollo de la Ingeniería de Software: Historia, Técnicas y su Impacto en la Ciencia de la Computación},
+    pdfauthor={Javier Alejandro González Díaz},
+}
+
+% Espaciado
+\onehalfspacing
+
+% Información del documento
+\title{\textbf{El Desarrollo de la Ingeniería de Software: Historia, Técnicas y su Impacto en la Ciencia de la Computación}}
+\author{
+    Javier Alejandro González Díaz \\
+    \textit{Grupo: C-412}
+}
+\date{\today}
+
+\begin{document}
+
+% Portada
+\maketitle
+\thispagestyle{empty}
+
+% Resumen
+\begin{abstract}
+\noindent
+Aquí va el resumen del trabajo. Debe ser conciso y presentar los aspectos más relevantes del tema desarrollado, incluyendo los objetivos, metodología y principales conclusiones. El resumen no debe exceder las 250 palabras y debe proporcionar una visión general clara del contenido del informe.
+
+\vspace{0.5cm}
+\noindent
+\textbf{Palabras clave:} Ingeniería de Software, Desarrollo, Metodologías, Historia, Técnicas
+\end{abstract}
+
+\newpage
+
+% Tabla de contenidos (opcional)
+\tableofcontents
+\newpage
+
+% Inicio del contenido
+\section{Introducción}
+
+En esta sección se presenta una introducción al tema, estableciendo el contexto histórico y la relevancia del mismo en el campo de la Ciencia de la Computación y la Ingeniería de Software. Se pueden mencionar las motivaciones para el desarrollo del tema y su impacto en la disciplina.
+
+% Ejemplo de cita con múltiples referencias
+Diversos autores han contribuido al desarrollo de esta área.
+
+\input{seccion_historia}
+
+\input{seccion_principios}
+
+\section{Desarrollo Técnico}
+
+Esta sección aborda los aspectos técnicos del tema, incluyendo:
+
+\subsection{Fundamentos Teóricos}
+
+Descripción de los fundamentos teóricos y conceptos clave. Se pueden incluir fórmulas matemáticas cuando sea necesario.
+
+% Ejemplo de ecuación
+\begin{equation}
+    f(x) = \sum_{i=1}^{n} a_i x^i
+    \label{eq:ejemplo}
+\end{equation}
+
+La ecuación \ref{eq:ejemplo} representa...
+
+\subsection{Técnicas y Metodologías}
+
+Descripción detallada de las técnicas, metodologías o algoritmos relacionados con el tema.
+
+% Ejemplo de código o algoritmo
+\begin{verbatim}
+// Ejemplo de pseudocódigo
+function ejemplo(parametro):
+    resultado = procesar(parametro)
+    return resultado
+\end{verbatim}
+
+\subsection{Aplicaciones Prácticas}
+
+Ejemplos de aplicación práctica de las técnicas descritas en contextos reales de desarrollo de software.
+
+% Ejemplo de tabla
+\begin{table}[H]
+    \centering
+    \caption{Ejemplo de tabla comparativa}
+    \label{tab:ejemplo}
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Característica} & \textbf{Opción A} & \textbf{Opción B} \\
+        \hline
+        Rendimiento & Alto & Medio \\
+        Complejidad & Baja & Alta \\
+        Escalabilidad & Buena & Excelente \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Como se muestra en la Tabla \ref{tab:ejemplo}, ...
+
+\section{Impacto en la Ciencia de la Computación}
+
+Análisis del impacto y relevancia del tema en el desarrollo de la Ciencia de la Computación y la Ingeniería de Software. Se debe discutir:
+
+\begin{enumerate}
+    \item Contribuciones principales al campo
+    \item Influencia en tecnologías actuales
+    \item Perspectivas futuras
+    \item Relación con otras áreas de conocimiento
+\end{enumerate}
+
+El trabajo de [] demuestra la importancia de...
+
+\section{Conclusiones}
+
+Síntesis de los aspectos más importantes desarrollados en el trabajo, destacando las contribuciones del tema a la Ingeniería de Software y las lecciones aprendidas.
+
+% Bibliografía
+\newpage
+\bibliographystyle{ieeetr}
+\bibliography{referencias}
+
+\end{document}

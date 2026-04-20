@@ -1,0 +1,44 @@
+# Ignorar todo en la carpeta build excepto archivos PDF
+/build/*
+!/build/*.pdf
+
+# Archivos y carpetas comunes de LaTeX para ignorar
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.ilg
+*.ind
+*.idx
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+*.glg
+*.glsdefs
+*.dvi
+*.ps
+*.thm
+*.backup
+*.bak
+*.tmp
+*.run.xml
+*.bcf
+*.pdfsync
+
+# Ignorar carpetas temporales de LaTeX
+/_minted*
+/auto

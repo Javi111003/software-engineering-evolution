@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución de la Ingeniería de Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        h1, h2, h3, .academic-font {
+            font-family: 'Merriweather', serif;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* Línea central */
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #cbd5e1; /* slate-300 */
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* Círculos en la línea central */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 4px solid #3b82f6; /* blue-500 */
+            top: 24px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 4px #eff6ff; /* blue-50 */
+        }
+
+        .left { left: 0; }
+        .right { left: 50%; }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after { left: -10px; }
+
+        .content {
+            padding: 24px;
+            background-color: white;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border-top: 4px solid #3b82f6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        /* Responsividad para móviles */
+        @media screen and (max-width: 768px) {
+            .timeline-container::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-item::before { left: 60px; border: medium solid white; border-width: 10px 10px 10px 0; border-color: transparent white transparent transparent; }
+            .left::after, .right::after { left: 21px; }
+            .right { left: 0%; }
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            color: #1e40af; /* blue-800 */
+            background-color: #dbeafe; /* blue-100 */
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Evolución de la Ingeniería de Software</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">De la programación artesanal a la automatización y agilidad continua. Un recorrido histórico por los hitos que transformaron el desarrollo de software.</p>
+        </div>
+
+        <div class="timeline-container">
+            
+            <!-- Etapa 1 -->
+            <div class="timeline-item left">
+                <div class="content">
+                    <div class="flex items-center justify-between mb-2">
+                        <h2 class="text-xl font-bold text-slate-900">Décadas de 1940 y 1950</h2>
+                        <span class="text-blue-500 bg-blue-50 px-3 py-1 rounded-full text-sm font-semibold shadow-sm"><i class="fa-solid fa-code mr-1"></i> Orígenes</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-blue-600 mb-3">La Programación Artesanal</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">El desarrollo de programas se realizaba con poca estandarización, escasa documentación y sin métodos formales. La falta de procesos hacía muy difícil el mantenimiento y evolución de los primeros sistemas computacionales.</p>
+                    <div>
+                        <span class="tag">Poca estandarización</span>
+                        <span class="tag">Sin métodos formales</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Etapa 2 -->
+            <div class="timeline-item right">
+                <div class="content" style="border-top-color: #ef4444;">
+                    <div class="flex items-center justify-between mb-2">
+                        <h2 class="text-xl font-bold text-slate-900">1968</h2>
+                        <span class="text-red-500 bg-red-50 px-3 py-1 rounded-full text-sm font-semibold shadow-sm"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Hito Histórico</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-red-600 mb-3">La Crisis del Software</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">El crecimiento exponencial en la complejidad de los sistemas provocó retrasos, sobrecostos y fallos. En la Conferencia de la OTAN se acuña el término "Ingeniería de Software" para tratar el desarrollo como una disciplina estructurada.</p>
+                    <div>
+                        <span class="tag" style="color: #991b1b; background-color: #fee2e2;">Conferencia OTAN</span>
+                        <span class="tag" style="color: #991b1b; background-color: #fee2e2;">Nacimiento de la disciplina</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Etapa 3 -->
+            <div class="timeline-item left">
+                <div class="content" style="border-top-color: #10b981;">
+                    <div class="flex items-center justify-between mb-2">
+                        <h2 class="text-xl font-bold text-slate-900">1970 - 1979</h2>
+                        <span class="text-emerald-500 bg-emerald-50 px-3 py-1 rounded-full text-sm font-semibold shadow-sm"><i class="fa-solid fa-water mr-1"></i> Ciclo de Vida</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-emerald-600 mb-3">Modelo en Cascada y Modularidad</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">Surge el modelo secuencial en cascada (Royce, 1970) introduciendo un ciclo de vida ordenado: requisitos, diseño, implementación, pruebas y mantenimiento. Se fortalece la modularidad y la necesidad estricta de documentación.</p>
+                    <div>
+                        <span class="tag" style="color: #065f46; background-color: #d1fae5;">Modelo en Cascada</span>
+                        <span class="tag" style="color: #065f46; background-color: #d1fae5;">Modularidad</span>
+                        <span class="tag" style="color: #065f46; background-color: #d1fae5;">Pruebas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Etapa 4 -->
+            <div class="timeline-item right">
+                <div class="content" style="border-top-color: #8b5cf6;">
+                    <div class="flex items-center justify-between mb-2">
+                        <h2 class="text-xl font-bold text-slate-900">Décadas de 1980 y 1990</h2>
+                        <span class="text-violet-500 bg-violet-50 px-3 py-1 rounded-full text-sm font-semibold shadow-sm"><i class="fa-solid fa-award mr-1"></i> Madurez</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-violet-600 mb-3">Profesionalización y Calidad</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">Aparecen marcos como el CMM para evaluar la madurez de los procesos, junto con estándares ISO/IEC. Se expande la Programación Orientada a Objetos (POO) y las herramientas automatizadas CASE.</p>
+                    <div>
+                        <span class="tag" style="color: #5b21b6; background-color: #ede9fe;">Modelo CMM</span>
+                        <span class="tag" style="color: #5b21b6; background-color: #ede9fe;">Normas ISO/IEC</span>
+                        <span class="tag" style="color: #5b21b6; background-color: #ede9fe;">POO & Herramientas CASE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Etapa 5 -->
+            <div class="timeline-item left">
+                <div class="content" style="border-top-color: #f59e0b;">
+                    <div class="flex items-center justify-between mb-2">
+                        <h2 class="text-xl font-bold text-slate-900">Años 2000</h2>
+                        <span class="text-amber-500 bg-amber-50 px-3 py-1 rounded-full text-sm font-semibold shadow-sm"><i class="fa-solid fa-bolt mr-1"></i> Flexibilidad</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-amber-600 mb-3">La Revolución de la Agilidad</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">Frente a la rigidez de los modelos tradicionales, nace el Manifiesto Ágil. Marcos de trabajo como Scrum y Extreme Programming (XP) proponen un desarrollo iterativo, incremental y centrado en el cliente.</p>
+                    <div>
+                        <span class="tag" style="color: #92400e; background-color: #fef3c7;">Manifiesto Ágil</span>
+                        <span class="tag" style="color: #92400e; background-color: #fef3c7;">Scrum & XP</span>
+                        <span class="tag" style="color: #92400e; background-color: #fef3c7;">Iterativo e Incremental</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Etapa 6 -->
+            <div class="timeline-item right">
+                <div class="content" style="border-top-color: #0ea5e9;">
+                    <div class="flex items-center justify-between mb-2">
+                        <h2 class="text-xl font-bold text-slate-900">2010 - Actualidad</h2>
+                        <span class="text-sky-500 bg-sky-50 px-3 py-1 rounded-full text-sm font-semibold shadow-sm"><i class="fa-solid fa-server mr-1"></i> Integración</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-sky-600 mb-3">DevOps y Automatización</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">La integración entre desarrollo y operaciones (DevOps) transforma la industria. Prácticas como la Integración Continua (CI) y la Infraestructura como Código (IaC) permiten entregas rápidas y confiables.</p>
+                    <div>
+                        <span class="tag" style="color: #075985; background-color: #e0f2fe;">DevOps</span>
+                        <span class="tag" style="color: #075985; background-color: #e0f2fe;">CI / CD</span>
+                        <span class="tag" style="color: #075985; background-color: #e0f2fe;">Infraestructura como Código</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
